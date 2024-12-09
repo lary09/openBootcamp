@@ -2,13 +2,13 @@ import React from "react"
 
 
 const Content =({parts})=>{
+    console.log({parts})
     return(
-        <ul>
-            {parts.map(parts =>(
-                <li key={parts.id}>{parts.name} {parts.exercises}</li>
+        <div>
+            {parts.map(part =>(
+                <p  key={part.id}>{part.name} {part.exercises}</p>
             ))}
-            
-        </ul>
+        </div>
     )
 }
 export default Content

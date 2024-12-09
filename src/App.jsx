@@ -1,5 +1,6 @@
 import "./App.css";
-import Course from "./components/Course"
+import Course from "./components/Course";
+import Note from "./components/Note"
 
 
 const App = () => {
@@ -47,13 +48,18 @@ const App = () => {
       ]
     }
   ]
-
+  console.log({courses }, "courses")
+  const totalExercises = courses.flatMap(course => course.parts).reduce((sum, part) => sum + part.exercises, 0)
+  console.log({totalExercises})
+  
   return (
     <div>
-      <h1>Web Development Curriculum</h1>
-      <Course course={courses} />
-    </div>
+
+   <Course  course={courses} />
+   <p>total of {totalExercises} exercises</p>
+   </div>
   )
 }
+
 
 export default App
