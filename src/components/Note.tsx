@@ -4,3 +4,4 @@ const Note = ({ notes }) => {
   return <p>{notes.content}</p>;
 };
 export default Note;
+

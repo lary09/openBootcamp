@@ -11,4 +11,5 @@ const Content =({parts})=>{
         </div>
     )
 }
+
 export default Content

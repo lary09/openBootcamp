@@ -9,6 +9,7 @@ const Course = ({ course }) => {
     <div>
         {course.map(course =>(
             <div key={course.id}>
+              
                 <Header course={course} />
                 <Content  parts={course.parts} />
             </div>
